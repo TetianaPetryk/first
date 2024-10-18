@@ -1,0 +1,89 @@
+
+.marquee-container {
+    display: flex; /* Використання Flexbox для горизонтального розташування */
+    flex-direction: row; /* Розташування елементів у ряд */
+}
+
+
+.marquee {
+    width: 100px; /* Ширина смуги */
+    height: 580px; /* Висота смуги */
+    overflow: hidden; /* Приховує текст, коли він виходить за межі смуги */
+    position: relative; /* Щоб діти елементи позиціонувалися відносно смуги */
+    margin: 20px; /* Відступ між смугами */
+    background-color: lightblue; /* Колір фону смуги за замовчуванням */
+}
+
+.p {
+    position: absolute; /* Для переміщення тексту всередині смуги */
+    width: 100%; /* Ширина тексту дорівнює ширині смуги */
+    white-space: nowrap; /* Забезпечує, щоб текст не переносився на новий рядок */
+    text-align: center; /* Центрування тексту */
+    font-size: 16px; /* Розмір шрифту (можна змінювати) */
+    transform: rotate(90deg); /* Повертаємо текст вертикально */
+    transform-origin: left bottom; /* Задаємо точку обертання тексту */
+}
+
+/* Анімація коливання для 1-го рядка */
+@keyframes sway {
+    0%, 100% { top: 0; }
+    50% { top: 220px; }
+}
+
+/* Анімація руху знизу до гори для 2-го рядка */
+@keyframes scrollUp {
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
+}
+
+/* Анімація руху згори до низу для 3-го рядка з зупинкою */
+@keyframes scrollDownStop {
+    0% { top: -100%; }
+    80% { top: 0; }
+    100% { top: 0; } /* Зупинка тексту в межах смуги */
+}
+
+/* Анімації з затримкою для 4-го і 5-го рядків */
+@keyframes delayedScroll {
+    0% { bottom: 100%; }
+    100% { bottom: -100%; }
+}
+
+/* 1. Коливання тексту */
+#row1 {
+    background-color: lightblue; 
+}
+#row1 .p {
+    animation: sway 10s ease-in-out infinite; 
+}
+
+
+#row2 {
+    background-color: lightgreen; 
+}
+#row2 .p {
+    animation: scrollUp 5s linear infinite; 
+}
+
+
+#row3 {
+    background-color: lightcoral; 
+}
+#row3 .p {
+    animation: scrollDownStop 5s linear infinite; 
+}
+
+#row4 {
+    background-color: lightyellow;
+}
+#row4 .p {
+    animation: delayedScroll 6s linear infinite; 
+}
+
+
+#row5 {
+    background-color: lightgray; 
+}
+#row5 .p {
+    animation: delayedScroll 8s linear infinite; 
+}
