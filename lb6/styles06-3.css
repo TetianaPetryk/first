@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo {
+    position: relative;
+    margin: 10px;
+}
+
+.photo img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.photo:hover .tooltip {
+    display: block; 
+}
