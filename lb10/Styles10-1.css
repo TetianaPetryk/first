@@ -1,0 +1,47 @@
+/* Загальні стилі сторінки */
+body {
+    background-image: url('фон.jpg'); /* Фонове зображення сторінки */
+    background-size: cover;
+    margin: 20px; /* Відстані від країв вікна */
+    font-size: 16px; /* Розмір тексту за бажанням */
+}
+
+/* Стиль для заголовка */
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+/* Стиль для абзаців */
+p {
+    text-align: justify;
+    text-indent: 30px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Стиль для зображень */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 400px; /* Фіксована ширина */
+    height: 300px; /* Фіксована висота */
+    object-fit: cover; /* Забезпечує обрізку зображення без спотворень */
+}
+
+/* Стиль для посилань */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
