@@ -1,0 +1,24 @@
+
+.image {
+    max-width: 100%; 
+    height: auto;
+}
+
+
+.tooltip {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+}
+
+
+
+area[href="https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%B8%D0%BA%D1%83%D1%82%D0%BD%D0%B8%D0%BA"]:hover ~ #triangle-tooltip,
+area[href="https://example.com/hexagon"]:hover ~ #hexagon-tooltip,
+area[href="https://example.com/cloud"]:hover ~ #cloud-tooltip {
+    display: block;
+}

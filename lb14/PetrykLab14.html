@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel ="stylesheet" href="styles.css">
+    <!-- Подключение Bootstrap -->
+    <link rel = "stylesheet" href="bootstrap-grid.min.css">
+    <title>Адаптивная страница</title>
+
+    <style>
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .content .row > div {
+        width: 50%; /* Дві колонки в одному рядку */
+    }
+    .content2 .row > div {
+        width: 100%; /* Одна колонка на рядок */
+        text-align: center;
+    }
+    .content2 .row > div:nth-child(1),
+    .content2 .row > div:nth-child(3) {
+        background-color: #ffc0cb; /* Колір для лівого і правого меню */
+    }
+    .content2 .row > div:nth-child(2) {
+        background-color: #fff; /* Колір для контенту */
+    }
+}
+
+
+.row div{
+    border: 1px solid gray;
+}
+
+.col-md-5{
+    background: #777777;
+}
+
+.col-md-8{
+    background: #777777;
+}
+
+    </style>
+</head>
+<body>
+<div class="container content">
+    <div class="row">
+    <div class="col-md-7">
+Ліва частина
+</div>
+<div class="col-md-5">
+Права частина
+</div>
+</div>
+</div>
+
+<div class="container content2">
+    <div class="row">
+        <div class="col-md-2">
+Ліве меню
+        </div>
+<div class="col-md-8">
+Контент
+</div>
+<div class="col-md-2">
+Праве меню
+</div>
+</div>
+</div>
+
+<div class="container content">
+    <div class="row">
+    <div class="col-md-5">
+Ліва частина
+</div>
+<div class="col-md-7">
+Права частина
+</div>
+</div>
+</div>
+
+</body>
