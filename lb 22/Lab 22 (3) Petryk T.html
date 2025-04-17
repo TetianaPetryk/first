@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz</title>
+</head>
+<body>
+  <h2>FizzBuzz: Вивід чисел з умовами</h2>
+
+  <label for="numberInput">Введіть ціле число n:</label>
+  <input type="number" id="numberInput" placeholder="Наприклад, 15">
+  <button onclick="runFizzBuzz()">Запустити FizzBuzz</button>
+
+  <p>Вивід дивіться у консолі (F12 → Console)</p>
+
+  <!-- Спочатку підключаємо файл з функцією -->
+  <script src="script22(3).js"></script>
+
+  <!-- Потім викликаємо функцію, яка її використовує -->
+  <script>
+    function runFizzBuzz() {
+      const n = Number(document.getElementById("numberInput").value);
+      fizzBuzz(n); // тепер вона визначена
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Арифметичні операції</title>
+</head>
+<body>
+  <h2>Вибір арифметичної операції</h2>
+
+  <label for="num1">Введіть перше число:</label>
+  <input type="number" id="num1" placeholder="Наприклад, 5"><br><br>
+
+  <label for="num2">Введіть друге число:</label>
+  <input type="number" id="num2" placeholder="Наприклад, 3"><br><br>
+
+  <label for="operation">Оберіть операцію:</label>
+  <select id="operation">
+    <option value="add">Додавання</option>
+    <option value="sub">Віднімання</option>
+    <option value="mul">Множення</option>
+    <option value="div">Ділення</option>
+  </select><br><br>
+
+  <button onclick="performOperation()">Виконати операцію</button>
+
+  <p id="result"></p>
+
+  <!-- Підключення зовнішнього JavaScript-файлу -->
+  <script src="script22(8).js"></script>
+</body>
+</html>
