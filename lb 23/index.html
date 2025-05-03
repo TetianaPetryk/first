@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Обчислення квадрата числа (AJAX)</title>
+</head>
+<body>
+    <h2>Введіть число, щоб обчислити його квадрат</h2>
+    <input type="number" id="numberInput" placeholder="Введіть число">
+    <button onclick="calculateSquare()">Обчислити</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateSquare() {
+            const number = document.getElementById('numberInput').value;
+
+            fetch('/square', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'number=' + encodeURIComponent(number)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('result').innerText = data;
+            })
+            .catch(error => {
+                document.getElementById('result').innerText = "Помилка з'єднання з сервером.";
+                console.error('Помилка:', error);
+            });
+        }
+    </script>
+</body>
+</html>
