@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: #d66;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .grid button {
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .highlight {
+    background-color: lightgreen;
+  }
+  
+  .wrong {
+    background-color: lightcoral;
+  }
+  
+  #resultsTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  #resultsTable th, #resultsTable td {
+    border: 1px solid #aaa;
+    padding: 8px 12px;
+  }
+  
+  .best {
+    background-color: peachpuff;
+  }
+  
