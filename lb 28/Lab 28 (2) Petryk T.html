@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Моє хобі — читання</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px 0;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // Класова компонента — загальна розповідь про хобі
+    class HobbyReading extends React.Component {
+      render() {
+        return (
+          <div>
+            <h2>Моє хобі — читання книжок</h2>
+            <p>
+              Ще з дитинства я обожнюю читати. Книги — це мій спосіб втекти від реальності, поринути у світ фантазій, пережити сотні історій разом із героями. 
+              Особливо мені до душі художня література, а також біографії та книги з саморозвитку.
+            </p>
+            <p>
+              Проте останнім часом, коли я працюю й одночасно навчаюсь, часу на улюблене хобі майже не лишається. Іноді я відкладаю книжку на кілька тижнів, хоча думками постійно повертаюсь до неї. 
+              Але навіть кілька прочитаних сторінок перед сном дарують мені натхнення й внутрішній спокій.
+            </p>
+            <p>
+              Я мрію, що згодом зможу виділяти більше часу на читання. 
+            </p>
+          </div>
+        );
+      }
+    }
+
+    // Функціональна компонента — список улюблених «книжкових» занять
+    const ReadingActivities = () => {
+      const activities = [
+        "Читати книги в тиші бібліотеки",
+        "Занотовувати улюблені цитати",
+        "Обговорювати прочитане з друзями",
+        "Шукати нові книжки у крамницях",
+        
+      ];
+
+      return (
+        <div>
+          <h3>Що я люблю робити, коли маю час на читання:</h3>
+          <ul>
+            {activities.map((activity, index) => (
+              <li key={index}>{activity}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    };
+
+    // Головна компонента
+    const App = () => (
+      <div>
+        <HobbyReading />
+        <ReadingActivities />
+      </div>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

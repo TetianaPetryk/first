@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Моє хобі</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    // Класова компонента
+    class HobbyClass extends React.Component {
+      render() {
+        return <h2>Ще з дитинства я обожнюю читати. Книги — це мій спосіб втекти від реальності, поринути у світ фантазій, пережити сотні історій разом із героями. Особливо мені до душі художня література, а також біографії та книги з саморозвитку.</h2>;
+      }
+    }
+
+    // Функціональна компонента
+    const HobbyFunction = () => (
+      <p>Сподіваюсь, що згодом зможу виділяти більше часу на читання, адже зараз працюю та навчаюсь, тож часу на хобі не вистачає. </p>
+    );
+
+    const App = () => (
+      <div>
+        <HobbyClass />
+        <HobbyFunction />
+      </div>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
